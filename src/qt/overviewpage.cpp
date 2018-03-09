@@ -192,6 +192,11 @@ void OverviewPage::updateDisplayUnit()
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
+    this->is_out_of_sync = fShow;
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
+}
+
+bool OverviewPage::getOutOfSyncWarning(void) {
+    return this->is_out_of_sync;
 }
